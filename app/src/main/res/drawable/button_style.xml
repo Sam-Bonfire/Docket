@@ -2,7 +2,19 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 <item>
     <shape>
-        <solid
+        <solid>
+
+        </solid>
     </shape>
+</item>
+
+<item
+    android:state_pressed="true">
+    <shape>
+        <corners>
+            a
+        </corners>
+    </shape>
+
 </item>
 </selector>

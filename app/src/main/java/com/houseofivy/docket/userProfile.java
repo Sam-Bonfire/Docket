@@ -11,6 +11,7 @@ public class userProfile {
     public userProfile(String userName, String userEmail) {
         this.userName = userName;
         this.userEmail = userEmail;
+
     }
 
     public String getUserName() {
@@ -28,4 +29,6 @@ public class userProfile {
     public void setUserEmail(String userEmail) {
         this.userEmail = userEmail;
     }
+
+
 }

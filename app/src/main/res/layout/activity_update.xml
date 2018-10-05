@@ -22,7 +22,7 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.149"
+        app:layout_constraintVertical_bias="0.144"
         app:srcCompat="@drawable/lock" />
 
     <EditText
@@ -43,7 +43,7 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.104" />
+        app:layout_constraintVertical_bias="0.201" />
 
     <EditText
         android:id="@+id/upemail"
@@ -80,5 +80,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/upemail"
         app:layout_constraintVertical_bias="0.235" />
+
 
 </android.support.constraint.ConstraintLayout>

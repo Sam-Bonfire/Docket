@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class RegistrationActivity extends AppCompatActivity {
 
-    private EditText userName,userEmail,userPassword;
+     private EditText userName,userEmail,userPassword;
     private Button regButton;
     private TextView userLogin;
     private FirebaseAuth firebaseAuth;
@@ -45,6 +45,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     firebaseAuth.createUserWithEmailAndPassword(user_mail,user_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
+
                             if(task.isSuccessful()){
                                 sendEmailVerification();
                             }else{

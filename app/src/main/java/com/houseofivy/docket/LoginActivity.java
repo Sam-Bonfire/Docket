@@ -46,7 +46,6 @@ public class LoginActivity extends AppCompatActivity {
 
         firebaseAuth=FirebaseAuth.getInstance();
         progressDialog=new ProgressDialog(this);
-        FirebaseUser user=firebaseAuth.getCurrentUser();
 
 
         // if(user!=null){
@@ -74,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
     }
     public void click(View v){
 
-        startActivity(new Intent(LoginActivity.this,RegistrationActivity.class));
+        startActivity(new Intent(LoginActivity.this,TimeTableView.class));
     }
 
 
@@ -87,13 +86,14 @@ public class LoginActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     progressDialog.dismiss();
+
                     //Toast.makeText(MainActivity.this,"Login Successful",Toast.LENGTH_SHORT).show();
                     checkEmailVerification();
                 }else{
                     Toast.makeText(LoginActivity.this,"Login Failed",Toast.LENGTH_SHORT).show();
                     counter--;
                     progressDialog.dismiss();
-                    Info.setText("No of attempts remaining"+counter);
+                    Info.setText("No of attempts remaining:-"+counter);
                     if(counter==0){
                         login.setEnabled(false);
                     }

@@ -78,7 +78,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="102dp"
         android:text="Register"
-        android:shadowColor="@color/common_google_signin_btn_text_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

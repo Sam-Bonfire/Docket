@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -24,10 +25,10 @@ public class LoginActivity extends AppCompatActivity {
     private TextView Info;
     private Button login;
     private int counter = 5;
-    private TextView tvregister;
+    //private TextView tvregister;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
-    private TextView forgotPassword;
+    //private TextView forgotPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,19 +40,20 @@ public class LoginActivity extends AppCompatActivity {
         Password = (EditText) findViewById(R.id.pass);
         Info = (TextView) findViewById(R.id.tvinfo);
         login = (Button) findViewById(R.id.btn);
-        tvregister=(TextView)findViewById(R.id.tvRegister);
-        forgotPassword=(TextView)findViewById(R.id.etForgotPassword);
+       // tvregister=(TextView)findViewById(R.id.tvRegister);
+      //  forgotPassword=(TextView)findViewById(R.id.etForgotPassword);
 
         Info.setText("Remaining attempts: 5");
 
         firebaseAuth=FirebaseAuth.getInstance();
         progressDialog=new ProgressDialog(this);
+        FirebaseUser user=firebaseAuth.getCurrentUser();
 
 
-        // if(user!=null){
-        //   finish();
-        // startActivity(new Intent(MainActivity.this,ThirdActivity.class));
-        //}
+        if(user!=null){
+           finish();
+         startActivity(new Intent(LoginActivity.this,TimeTableView.class));
+        }
 
 
 
@@ -73,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
     }
     public void click(View v){
 
-        startActivity(new Intent(LoginActivity.this,TimeTableView.class));
+        startActivity(new Intent(LoginActivity.this,RegistrationActivity.class));
     }
 
 

@@ -69,12 +69,12 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void clicka(View v){
-        startActivity(new Intent(LoginActivity.this,ForgotPasswordActivity.class));
+        startActivity(new Intent(LoginActivity.this,ForgotPassword.class));
 
     }
     public void click(View v){
 
-        startActivity(new Intent(LoginActivity.this,SecondActivity.class));
+        startActivity(new Intent(LoginActivity.this,RegistrationActivity.class));
     }
 
 
@@ -108,7 +108,7 @@ public class LoginActivity extends AppCompatActivity {
         Boolean emailFlag = firebaseUser.isEmailVerified();
 
         if(emailFlag){
-            startActivity(new Intent(LoginActivity.this,ThirdActivity.class));
+            startActivity(new Intent(LoginActivity.this,MenuActivity.class));
 
         }
         else{

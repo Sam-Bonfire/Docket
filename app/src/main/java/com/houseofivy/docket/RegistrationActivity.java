@@ -22,19 +22,13 @@ import java.util.Objects;
 
 public class RegistrationActivity extends AppCompatActivity {
 
-<<<<<<< HEAD
+
      private EditText userName,userEmail,userPassword,userRole;
     private Button regButton;
     private TextView userLogin;
     private FirebaseAuth firebaseAuth;
     String email,password,name,role;
-=======
-    private EditText userName, userEmail, userPassword;
-    private Button regButton;
-    private TextView userLogin;
-    private FirebaseAuth firebaseAuth;
-    String email, password, name;
->>>>>>> f969255ae075fddbb02d369a94b0c12e452ef95f
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,20 +43,17 @@ public class RegistrationActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (validate()) {
                     //Upload data to database
-<<<<<<< HEAD
+
                     String user_mail=userEmail.getText().toString().trim();
                     String user_password=userPassword.getText().toString().trim();
                     String user_role=userRole.getText().toString().trim();
-=======
-                    String user_mail = userEmail.getText().toString().trim();
-                    String user_password = userPassword.getText().toString().trim();
->>>>>>> f969255ae075fddbb02d369a94b0c12e452ef95f
+
 
                     firebaseAuth.createUserWithEmailAndPassword(user_mail, user_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
-<<<<<<< HEAD
+
                             if(task.isSuccessful()){
                                 userProfile user=new userProfile(name,email,role);
                                 FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -73,10 +64,7 @@ public class RegistrationActivity extends AppCompatActivity {
                                         }
                                     }
                                 });
-=======
-                            if (task.isSuccessful()) {
->>>>>>> f969255ae075fddbb02d369a94b0c12e452ef95f
-                                sendEmailVerification();
+                                
                             } else {
                                 Toast.makeText(RegistrationActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
                             }
@@ -95,7 +83,7 @@ public class RegistrationActivity extends AppCompatActivity {
         });
     }
 
-<<<<<<< HEAD
+ 
     private void setupUIView(){
         userName=(EditText)findViewById(R.id.username);
         userEmail=(EditText)findViewById(R.id.useremail);
@@ -114,24 +102,6 @@ public class RegistrationActivity extends AppCompatActivity {
         role=userRole.getText().toString();
 
         if(name.isEmpty() && password.isEmpty() && email.isEmpty() && role.isEmpty() ) {
-=======
-    private void setupUIView() {
-        userName = (EditText) findViewById(R.id.username);
-        userEmail = (EditText) findViewById(R.id.useremail);
-        userPassword = (EditText) findViewById(R.id.userpassword);
-        regButton = (Button) findViewById(R.id.btnregister);
-        userLogin = (TextView) findViewById(R.id.userlogin);
-
-    }
-
-    private Boolean validate() {
-        Boolean result = false;
-        name = userName.getText().toString();
-        email = userEmail.getText().toString();
-        password = userPassword.getText().toString();
-
-        if (name.isEmpty() && password.isEmpty() && email.isEmpty()) {
->>>>>>> f969255ae075fddbb02d369a94b0c12e452ef95f
             Toast.makeText(this, "Please enter all the details", Toast.LENGTH_SHORT).show();
         } else {
             result = true;
@@ -160,17 +130,11 @@ public class RegistrationActivity extends AppCompatActivity {
         }
     }
 
-<<<<<<< HEAD
+
     private void sendUserdata(){
         FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
         DatabaseReference myref=firebaseDatabase.getReference(firebaseAuth.getUid());
         userProfile UserProfile=new userProfile(name,email,role);
-=======
-    private void sendUserdata() {
-        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference myref = firebaseDatabase.getReference(firebaseAuth.getUid());
-        userProfile UserProfile = new userProfile(name, email);
->>>>>>> f969255ae075fddbb02d369a94b0c12e452ef95f
         myref.setValue(UserProfile);
     }
 }

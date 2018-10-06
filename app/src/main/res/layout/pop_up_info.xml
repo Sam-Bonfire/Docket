@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="350dp"
+    android:background="@drawable/pop_up_style"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <!--<TextView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text="X"
+        android:layout_gravity="end"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="300dp"
+        android:textSize="15sp"
+        android:background="@drawable/circle_background"/>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:shadowColor="@color/colorAccent"
+        android:text="ISEE"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
+        android:textSize="40sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="3dp"
+        android:text="Information System and Engineering Economics"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="Subject Teacher Name: "
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:text="Subject Teacher Name: "
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="Classroom : "
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:text="Classroom"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="Best of Luck"
+        android:textColor="@android:color/black"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/btn_pop_up_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="end"
+        android:layout_marginRight="20dp"
+        android:text="OK"
+        android:padding="5dp"
+        android:background="@drawable/rounded_button"/>
+
+</LinearLayout>

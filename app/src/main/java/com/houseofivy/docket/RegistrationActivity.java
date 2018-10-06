@@ -18,13 +18,15 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Objects;
+
 public class RegistrationActivity extends AppCompatActivity {
 
-     private EditText userName,userEmail,userPassword;
+     private EditText userName,userEmail,userPassword,userRole;
     private Button regButton;
     private TextView userLogin;
     private FirebaseAuth firebaseAuth;
-    String email,password,name;
+    String email,password,name,role;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,12 +43,22 @@ public class RegistrationActivity extends AppCompatActivity {
                     //Upload data to database
                     String user_mail=userEmail.getText().toString().trim();
                     String user_password=userPassword.getText().toString().trim();
+                    String user_role=userRole.getText().toString().trim();
 
                     firebaseAuth.createUserWithEmailAndPassword(user_mail,user_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
                             if(task.isSuccessful()){
+                                userProfile user=new userProfile(name,email,role);
+                                FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if(task.isSuccessful()){
+                                            Toast.makeText(RegistrationActivity.this,"Done",Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
                                 sendEmailVerification();
                             }else{
                                 Toast.makeText(RegistrationActivity.this,"Registration Failed",Toast.LENGTH_SHORT).show();
@@ -72,6 +84,7 @@ public class RegistrationActivity extends AppCompatActivity {
         userPassword=(EditText)findViewById(R.id.userpassword);
         regButton=(Button)findViewById(R.id.btnregister);
         userLogin=(TextView)findViewById(R.id.userlogin);
+        userRole=(EditText)findViewById(R.id.etrole);
 
     }
 
@@ -80,8 +93,9 @@ public class RegistrationActivity extends AppCompatActivity {
         name=userName.getText().toString();
         email=userEmail.getText().toString();
         password=userPassword.getText().toString();
+        role=userRole.getText().toString();
 
-        if(name.isEmpty() && password.isEmpty() && email.isEmpty()) {
+        if(name.isEmpty() && password.isEmpty() && email.isEmpty() && role.isEmpty() ) {
             Toast.makeText(this, "Please enter all the details", Toast.LENGTH_SHORT).show();
         }else{
             result=true;
@@ -114,7 +128,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private void sendUserdata(){
         FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
         DatabaseReference myref=firebaseDatabase.getReference(firebaseAuth.getUid());
-        userProfile UserProfile=new userProfile(name,email);
+        userProfile UserProfile=new userProfile(name,email,role);
         myref.setValue(UserProfile);
     }
 }

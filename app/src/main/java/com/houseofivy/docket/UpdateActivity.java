@@ -17,7 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class UpdateActivity extends AppCompatActivity {
 
-    private EditText updateName,updateEmail;
+    private EditText updateName,updateEmail,updateRole;
     private Button updateButton;
     private FirebaseDatabase firebaseDatabase;
     private FirebaseAuth firebaseAuth;
@@ -30,6 +30,7 @@ public class UpdateActivity extends AppCompatActivity {
         updateName=(EditText)findViewById(R.id.upname);
         updateEmail=(EditText)findViewById(R.id.upemail);
         updateButton=(Button)findViewById(R.id.upsave);
+        updateRole=(EditText)findViewById(R.id.uprole);
 
         firebaseAuth= FirebaseAuth.getInstance();
         firebaseDatabase= FirebaseDatabase.getInstance();
@@ -41,6 +42,7 @@ public class UpdateActivity extends AppCompatActivity {
                 userProfile UserProfile=dataSnapshot.getValue(userProfile.class);
                 updateName.setText(UserProfile.getUserEmail());
                 updateEmail.setText(UserProfile.getUserName());
+                updateRole.setText(UserProfile.getUserRole());
             }
 
             @Override
@@ -54,8 +56,9 @@ public class UpdateActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String name=updateName.getText().toString();
                 String email=updateEmail.getText().toString();
+                String role=updateRole.getText().toString();
 
-                userProfile Userprofile=new userProfile(name,email);
+                userProfile Userprofile=new userProfile(name,email,role);
                 databaseReference.setValue(Userprofile);
                 finish();
             }

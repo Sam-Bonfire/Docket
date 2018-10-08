@@ -32,7 +32,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
         android:prompt="Subject Name"
-        android:entries="@array/subjectName"
+        android:entries="@array/classRoomName"
         android:background="@drawable/rounded_input_fields">
     </Spinner>
 
@@ -42,7 +42,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
         android:prompt="Subject Name"
-        android:entries="@array/subjectName"
+        android:entries="@array/batch"
         android:background="@drawable/rounded_input_fields">
     </Spinner>
 

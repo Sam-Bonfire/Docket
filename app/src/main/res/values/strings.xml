@@ -19,8 +19,23 @@
 
     <string-array name="classRoomName">
         <item>------Room No.------</item>
-        <item>Dr. D. J. Pereira</item>
-        <item>Dr. G. S. Ghumbre</item>
-        <item>Mrs. P. Deshmukh</item>
+        <item>C101</item>
+        <item>C102</item>
+        <item>C207</item>
+        <item>Open Source Lab</item>
+        <item>Graphics and Multimedia Lab</item>
+        <item>Data Structures Lab</item>
+        <item>Computer Networks Lab</item>
+        <item>M P Lab</item>
+        <item>DBMS Lab</item>
+    </string-array>
+
+    <string-array name="batch">
+        <item>------Select Batch------</item>
+        <item>1st</item>
+        <item>2nd</item>
+        <item>3rd</item>
+        <item>4th</item>
+        <item>ALL</item>
     </string-array>
 </resources>

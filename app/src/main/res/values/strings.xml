@@ -1,4 +1,26 @@
 <resources>
     <string name="app_name">Docket</string>
     <string name="_1234">1234</string>
+    <string-array name="subjectName">
+        <item>------Subject Name------</item>
+        <item>SDL</item>
+        <item>ISEE</item>
+        <item>DBMS</item>
+        <item>TOC</item>
+        <item>CN</item>
+    </string-array>
+
+    <string-array name="teacherName">
+        <item>------Teacher Name------</item>
+        <item>Dr. D. J. Pereira</item>
+        <item>Dr. G. S. Ghumbre</item>
+        <item>Mrs. P. Deshmukh</item>
+    </string-array>
+
+    <string-array name="classRoomName">
+        <item>------Room No.------</item>
+        <item>Dr. D. J. Pereira</item>
+        <item>Dr. G. S. Ghumbre</item>
+        <item>Mrs. P. Deshmukh</item>
+    </string-array>
 </resources>

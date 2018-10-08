@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="350dp"
+    android:layout_gravity="center"
+    android:background="@drawable/pop_up_style"
+    android:orientation="vertical">
+
+    <Spinner
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:prompt="Subject Name"
+        android:entries="@array/subjectName"
+        android:background="@drawable/rounded_input_fields">
+    </Spinner>
+
+    <Spinner
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:prompt="Subject Name"
+        android:entries="@array/teacherName"
+        android:background="@drawable/rounded_input_fields">
+    </Spinner>
+
+    <Spinner
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:prompt="Subject Name"
+        android:entries="@array/subjectName"
+        android:background="@drawable/rounded_input_fields">
+    </Spinner>
+
+    <Spinner
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:prompt="Subject Name"
+        android:entries="@array/subjectName"
+        android:background="@drawable/rounded_input_fields">
+    </Spinner>
+
+    <Button
+        android:id="@+id/btn_pop_up_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="end"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button"
+        android:padding="5dp"
+        android:text="OK" />
+
+</LinearLayout>

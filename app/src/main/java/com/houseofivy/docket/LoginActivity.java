@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if(user!=null){
            finish();
-         startActivity(new Intent(LoginActivity.this,TimeTableView.class));
+         startActivity(new Intent(LoginActivity.this,timeTable.class));
         }
 
 
@@ -137,7 +137,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if(emailFlag){
 
-            startActivity(new Intent(LoginActivity.this,TimeTableView.class));
+            startActivity(new Intent(LoginActivity.this,timeTable.class));
 
         }
         else{

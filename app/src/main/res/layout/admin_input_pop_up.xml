@@ -11,8 +11,9 @@
         android:layout_height="30dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
-        android:entries="@array/subjectName"
-        android:background="@drawable/rounded_input_fields">
+        android:background="@drawable/rounded_input_fields"
+        android:entries="@array/subjectName">
+
     </Spinner>
 
     <Spinner
@@ -20,8 +21,9 @@
         android:layout_height="30dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
-        android:entries="@array/teacherName"
-        android:background="@drawable/rounded_input_fields">
+        android:background="@drawable/rounded_input_fields"
+        android:entries="@array/teacherName">
+
     </Spinner>
 
     <Spinner
@@ -29,8 +31,9 @@
         android:layout_height="30dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
-        android:entries="@array/classRoomName"
-        android:background="@drawable/rounded_input_fields">
+        android:background="@drawable/rounded_input_fields"
+        android:entries="@array/classRoomName">
+
     </Spinner>
 
     <Spinner
@@ -38,8 +41,9 @@
         android:layout_height="30dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
-        android:entries="@array/batch"
-        android:background="@drawable/rounded_input_fields">
+        android:background="@drawable/rounded_input_fields"
+        android:entries="@array/batch">
+
     </Spinner>
 
     <Button
@@ -47,8 +51,8 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_gravity="end"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
         android:background="@drawable/rounded_button"
         android:padding="5dp"
         android:text="OK" />

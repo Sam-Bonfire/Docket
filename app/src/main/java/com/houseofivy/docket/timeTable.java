@@ -1,11 +1,16 @@
 package com.houseofivy.docket;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import com.houseofivy.docket.R;
@@ -40,6 +45,8 @@ public class timeTable extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+    private DrawerLayout dl;
+    private ActionBarDrawerToggle andt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,16 +68,55 @@ public class timeTable extends AppCompatActivity {
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
+        dl = findViewById(R.id.drl_student);
+        andt = new ActionBarDrawerToggle(this,dl,R.string.open,R.string.close);
+        andt.setDrawerIndicatorEnabled(true);
+        dl.addDrawerListener(andt);
+        andt.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        final NavigationView nav_view = (NavigationView)findViewById(R.id.nav_view_student);
+
+        nav_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.nav_se_option:
+                        Toast.makeText(timeTable.this,"SE",Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case R.id.nav_te_option:
+                        Toast.makeText(timeTable.this,"TE",Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case R.id.nav_be_option:
+                        Toast.makeText(timeTable.this,"BE",Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case R.id.nav_teacher:
+                        Toast.makeText(timeTable.this,"Teacher",Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case R.id.nav_notify:
+                        Toast.makeText(timeTable.this,"Notification",Toast.LENGTH_SHORT).show();
+                        break;
+                }
+
+                return true;
+            }
+        });
+
 
     }
 
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_time_table, menu);
         return true;
-    }
+    }*/
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -80,11 +126,24 @@ public class timeTable extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+/*
+        switch (id){
+            case R.id.action_se:
+                startActivity(new Intent(this,timeTable_SE.class));
+                return true;
 
-        return super.onOptionsItemSelected(item);
+            case R.id.action_te:
+                startActivity(new Intent(this,timeTable.class));
+                return true;
+
+            case R.id.action_be:
+                startActivity(new Intent(this,timeTable_BE.class));
+                return true;
+        }
+*/
+
+
+        return andt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 
     /**
@@ -140,9 +199,10 @@ public class timeTable extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 4;
         }
     }
+
 
     public void onClickListen(View view) {
         switch (view.getId()) {

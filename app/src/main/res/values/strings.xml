@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Docket</string>
     <string name="_1234">1234</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
     <string-array name="subjectName">
         <item>------Subject Name------</item>
         <item>SDL</item>

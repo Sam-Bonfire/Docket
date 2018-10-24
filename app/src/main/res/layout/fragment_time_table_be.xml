@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="TE TimeTable"
+            android:text="BE TimeTable"
             android:textAlignment="center"
             android:textSize="40sp" />
 

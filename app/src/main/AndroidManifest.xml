@@ -26,6 +26,15 @@
             android:name=".timeTable"
             android:label="@string/title_activity_time_table"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".timeTable_se"
+            android:label="@string/title_activity_time_table"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".timeTable_be"
+            android:label="@string/title_activity_time_table"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
+
 
 </manifest>

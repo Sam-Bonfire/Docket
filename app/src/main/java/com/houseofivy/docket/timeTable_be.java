@@ -4,34 +4,27 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
-import com.google.firebase.auth.FirebaseAuth;
-import com.houseofivy.docket.R;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class timeTable extends AppCompatActivity {
+public class timeTable_be extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -50,10 +43,12 @@ public class timeTable extends AppCompatActivity {
     private DrawerLayout dl;
     private ActionBarDrawerToggle andt;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_time_table);
+        setContentView(R.layout.activity_time_table_be);
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -71,54 +66,46 @@ public class timeTable extends AppCompatActivity {
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
         dl = findViewById(R.id.drl_student);
-        andt = new ActionBarDrawerToggle(this,dl,R.string.open,R.string.close);
+        andt = new ActionBarDrawerToggle(this, dl, R.string.open, R.string.close);
         andt.setDrawerIndicatorEnabled(true);
         dl.addDrawerListener(andt);
         andt.syncState();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        final NavigationView nav_view = (NavigationView)findViewById(R.id.nav_view_student);
+        final NavigationView nav_view = (NavigationView) findViewById(R.id.nav_view_student);
 
         nav_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.nav_se_option:
-                        Toast.makeText(timeTable.this,"SE",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(timeTable.this,timeTable_se.class));
+                        Toast.makeText(timeTable_be.this, "SE", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable_be.this,timeTable_se.class));
                         break;
 
                     case R.id.nav_te_option:
-                        Toast.makeText(timeTable.this,"TE",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(timeTable.this,timeTable.class));
+                        Toast.makeText(timeTable_be.this, "TE", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable_be.this,timeTable.class));
                         break;
 
                     case R.id.nav_be_option:
-                        Toast.makeText(timeTable.this,"BE",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(timeTable.this,timeTable_be.class));
+                        Toast.makeText(timeTable_be.this, "BE", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable_be.this,timeTable_be.class));
                         break;
 
                     case R.id.nav_teacher:
-                        Toast.makeText(timeTable.this,"Teacher",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(timeTable_be.this, "Teacher", Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.nav_notify:
-                        Toast.makeText(timeTable.this,"Notification",Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case R.id.nav_logout:
-                        Toast.makeText(timeTable.this,"Logout",Toast.LENGTH_SHORT).show();
-                        FirebaseAuth firebaseAuth;
-                        firebaseAuth=FirebaseAuth.getInstance();
-                        firebaseAuth.signOut();
+                        Toast.makeText(timeTable_be.this, "Notification", Toast.LENGTH_SHORT).show();
                         break;
                 }
 
                 return true;
             }
         });
-
 
     }
 
@@ -186,7 +173,7 @@ public class timeTable extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_time_table, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_time_table_be, container, false);
             return rootView;
         }
     }
@@ -219,212 +206,212 @@ public class timeTable extends AppCompatActivity {
     public void onClickListen(View view) {
         switch (view.getId()) {
             case R.id.tv_0_0:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_0_1:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_0_2:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_0_3:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_0_4:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_0_5:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_0_6:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_1_0:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_1_1:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_1_2:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_1_3:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_1_4:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_1_5:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_1_6:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_2_0:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_2_1:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_2_2:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_2_3:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_2_4:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_2_5:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_2_6:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_3_0:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_3_1:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_3_2:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_3_3:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_3_4:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_3_5:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_3_6:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_4_0:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_4_1:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_4_2:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_4_3:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_4_4:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_4_5:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_4_6:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_5_0:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_5_1:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_5_2:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_5_3:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_5_4:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_5_5:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
 
             case R.id.tv_5_6:
-                Toast.makeText(timeTable.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(timeTable_be.this, "Button is clicked", Toast.LENGTH_SHORT).show();
                 showPopUp();
                 break;
         }

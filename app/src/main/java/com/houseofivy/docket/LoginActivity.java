@@ -45,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         Info = (TextView) findViewById(R.id.tvinfo);
         login = (Button) findViewById(R.id.btn);
         Role=(EditText)findViewById(R.id.logRole);
+        Role.setCursorVisible(false);
        // tvregister=(TextView)findViewById(R.id.tvRegister);
       //  forgotPassword=(TextView)findViewById(R.id.etForgotPassword);
 
@@ -74,6 +75,7 @@ public class LoginActivity extends AppCompatActivity {
         if(user!=null){
            finish();
          startActivity(new Intent(LoginActivity.this,timeTable.class));
+         finish();
         }
 
 
@@ -138,6 +140,7 @@ public class LoginActivity extends AppCompatActivity {
         if(emailFlag){
 
             startActivity(new Intent(LoginActivity.this,timeTable.class));
+            finish();
 
         }
         else{

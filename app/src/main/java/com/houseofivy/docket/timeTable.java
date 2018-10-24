@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -112,6 +113,8 @@ public class timeTable extends AppCompatActivity {
                         FirebaseAuth firebaseAuth;
                         firebaseAuth=FirebaseAuth.getInstance();
                         firebaseAuth.signOut();
+                        startActivity(new Intent(timeTable.this,LoginActivity.class));
+                        finish();
                         break;
                 }
 
@@ -187,6 +190,8 @@ public class timeTable extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_time_table, container, false);
+            /*TextView tv = rootView.findViewById(R.id.tv_header);
+            tv.setText("Hello");*/
             return rootView;
         }
     }
@@ -210,7 +215,7 @@ public class timeTable extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
+            // Show 4 total pages.
             return 4;
         }
     }

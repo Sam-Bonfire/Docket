@@ -14,7 +14,7 @@
         tools:context="com.houseofivy.docket.TimeTableView">
 
         <TextView
-            android:id="@+id/tv_header"
+            android:id="@+id/tv_be_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -125,7 +125,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_0_0"
+                android:id="@+id/tv_be_0_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -136,7 +136,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_0_1"
+                android:id="@+id/tv_be_0_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -147,7 +147,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_0_2"
+                android:id="@+id/tv_be_0_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -158,7 +158,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_0_3"
+                android:id="@+id/tv_be_0_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -169,7 +169,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_0_4"
+                android:id="@+id/tv_be_0_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -180,7 +180,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_0_5"
+                android:id="@+id/tv_be_0_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -191,100 +191,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_0_6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_style"
-                android:onClick="onClickListen"
-                android:text="@string/_1234"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_info_layout"
-                android:onClick="onClickListen"
-                android:text="@string/_1234"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/tv_1_0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_style"
-                android:onClick="onClickListen"
-                android:text="@string/_1234"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/tv_1_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_style"
-                android:onClick="onClickListen"
-                android:text="@string/_1234"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/tv_1_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_style"
-                android:onClick="onClickListen"
-                android:text="@string/_1234"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/tv_1_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_style"
-                android:onClick="onClickListen"
-                android:text="@string/_1234"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/tv_1_4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_style"
-                android:onClick="onClickListen"
-                android:text="@string/_1234"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/tv_1_5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_style"
-                android:onClick="onClickListen"
-                android:text="@string/_1234"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/tv_1_6"
+                android:id="@+id/tv_be_0_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -311,7 +218,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_2_0"
+                android:id="@+id/tv_be_1_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -322,7 +229,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_2_1"
+                android:id="@+id/tv_be_1_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -333,7 +240,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_2_2"
+                android:id="@+id/tv_be_1_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -344,7 +251,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_2_3"
+                android:id="@+id/tv_be_1_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -355,7 +262,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_2_4"
+                android:id="@+id/tv_be_1_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -366,7 +273,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_2_5"
+                android:id="@+id/tv_be_1_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -377,100 +284,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_2_6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_style"
-                android:onClick="onClickListen"
-                android:text="@string/_1234"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_info_layout"
-                android:onClick="onClickListen"
-                android:text="@string/_1234"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/tv_3_0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_style"
-                android:onClick="onClickListen"
-                android:text="@string/_1234"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/tv_3_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_style"
-                android:onClick="onClickListen"
-                android:text="@string/_1234"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/tv_3_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_style"
-                android:onClick="onClickListen"
-                android:text="@string/_1234"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/tv_3_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_style"
-                android:onClick="onClickListen"
-                android:text="@string/_1234"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/tv_3_4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_style"
-                android:onClick="onClickListen"
-                android:text="@string/_1234"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/tv_3_5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_style"
-                android:onClick="onClickListen"
-                android:text="@string/_1234"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/tv_3_6"
+                android:id="@+id/tv_be_1_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -497,7 +311,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_4_0"
+                android:id="@+id/tv_be_2_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -508,7 +322,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_4_1"
+                android:id="@+id/tv_be_2_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -519,7 +333,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_4_2"
+                android:id="@+id/tv_be_2_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -530,7 +344,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_4_3"
+                android:id="@+id/tv_be_2_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -541,7 +355,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_4_4"
+                android:id="@+id/tv_be_2_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -552,7 +366,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_4_5"
+                android:id="@+id/tv_be_2_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -563,7 +377,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_4_6"
+                android:id="@+id/tv_be_2_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -590,7 +404,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_5_0"
+                android:id="@+id/tv_be_3_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -601,7 +415,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_5_1"
+                android:id="@+id/tv_be_3_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -612,7 +426,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_5_2"
+                android:id="@+id/tv_be_3_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -623,7 +437,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_5_3"
+                android:id="@+id/tv_be_3_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -634,7 +448,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_5_4"
+                android:id="@+id/tv_be_3_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -645,7 +459,7 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_5_5"
+                android:id="@+id/tv_be_3_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
@@ -656,7 +470,193 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/tv_5_6"
+                android:id="@+id/tv_be_3_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style"
+                android:onClick="onClickListen"
+                android:text="@string/_1234"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_info_layout"
+                android:onClick="onClickListen"
+                android:text="@string/_1234"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/tv_be_4_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style"
+                android:onClick="onClickListen"
+                android:text="@string/_1234"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/tv_be_4_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style"
+                android:onClick="onClickListen"
+                android:text="@string/_1234"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/tv_be_4_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style"
+                android:onClick="onClickListen"
+                android:text="@string/_1234"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/tv_be_4_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style"
+                android:onClick="onClickListen"
+                android:text="@string/_1234"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/tv_be_4_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style"
+                android:onClick="onClickListen"
+                android:text="@string/_1234"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/tv_be_4_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style"
+                android:onClick="onClickListen"
+                android:text="@string/_1234"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/tv_be_4_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style"
+                android:onClick="onClickListen"
+                android:text="@string/_1234"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_info_layout"
+                android:onClick="onClickListen"
+                android:text="@string/_1234"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/tv_be_5_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style"
+                android:onClick="onClickListen"
+                android:text="@string/_1234"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/tv_be_5_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style"
+                android:onClick="onClickListen"
+                android:text="@string/_1234"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/tv_be_5_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style"
+                android:onClick="onClickListen"
+                android:text="@string/_1234"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/tv_be_5_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style"
+                android:onClick="onClickListen"
+                android:text="@string/_1234"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/tv_be_5_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style"
+                android:onClick="onClickListen"
+                android:text="@string/_1234"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/tv_be_5_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style"
+                android:onClick="onClickListen"
+                android:text="@string/_1234"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/tv_be_5_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"

@@ -102,6 +102,7 @@ public class timeTable extends AppCompatActivity {
 
                     case R.id.nav_teacher:
                         Toast.makeText(timeTable.this,"Teacher",Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable.this,timeTable_teacher.class));
                         break;
 
                     case R.id.nav_notify:

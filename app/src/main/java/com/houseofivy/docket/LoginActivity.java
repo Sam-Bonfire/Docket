@@ -73,9 +73,9 @@ public class LoginActivity extends AppCompatActivity {
 
 
         if(user!=null){
-           finish();
+           LoginActivity.this.finish();
          startActivity(new Intent(LoginActivity.this,timeTable.class));
-         finish();
+         LoginActivity.this.finish();
         }
 
 
@@ -140,7 +140,7 @@ public class LoginActivity extends AppCompatActivity {
         if(emailFlag){
 
             startActivity(new Intent(LoginActivity.this,timeTable.class));
-            finish();
+            LoginActivity.this.finish();
 
         }
         else{

@@ -34,6 +34,10 @@
             android:name=".timeTable_be"
             android:label="@string/title_activity_time_table"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".timeTable_teacher"
+            android:label="@string/title_activity_time_table"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 

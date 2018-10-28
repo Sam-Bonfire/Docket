@@ -50,7 +50,7 @@
             android:textColorHint="@android:color/white"
             android:textSize="20sp" />
 
-        <Spinner
+        <EditText
             android:id="@+id/logRole"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

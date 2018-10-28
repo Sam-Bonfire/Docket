@@ -88,25 +88,38 @@ public class timeTable extends AppCompatActivity {
                     case R.id.nav_se_option:
                         Toast.makeText(timeTable.this,"SE",Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(timeTable.this,timeTable_se.class));
+                        timeTable.this.finish();
                         break;
 
                     case R.id.nav_te_option:
                         Toast.makeText(timeTable.this,"TE",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(timeTable.this,timeTable.class));
                         break;
 
                     case R.id.nav_be_option:
                         Toast.makeText(timeTable.this,"BE",Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(timeTable.this,timeTable_be.class));
+                        timeTable.this.finish();
                         break;
 
                     case R.id.nav_teacher:
                         Toast.makeText(timeTable.this,"Teacher",Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(timeTable.this,timeTable_teacher.class));
+                        timeTable.this.finish();
                         break;
 
                     case R.id.nav_notify:
                         Toast.makeText(timeTable.this,"Notification",Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case R.id.nav_timetable_manage:
+                        Toast.makeText(timeTable.this,"Teacher",Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable.this,timeTable_manage.class));
+                        timeTable.this.finish();
+                        break;
+
+                    case R.id.nav_timetable_create:
+                        Toast.makeText(timeTable.this,"Teacher",Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable.this,timeTable_Generate.class));
                         break;
 
                     case R.id.nav_logout:
@@ -195,8 +208,8 @@ public class timeTable extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_time_table, container, false);
-            /*TextView tv = rootView.findViewById(R.id.tv_header);
-            tv.setText("Hello");*/
+            TextView header = rootView.findViewById(R.id.tv_header);
+            header.setText("TE TIMETABLE");
             return rootView;
         }
     }

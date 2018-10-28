@@ -82,40 +82,53 @@ public class timeTable_be extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.nav_se_option:
-                        Toast.makeText(timeTable_be.this,"SE",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(timeTable_be.this,timeTable_se.class));
+                        Toast.makeText(timeTable_be.this, "SE", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable_be.this, timeTable_se.class));
+                        timeTable_be.this.finish();
                         break;
 
                     case R.id.nav_te_option:
-                        Toast.makeText(timeTable_be.this,"TE",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(timeTable_be.this,timeTable_be.class));
+                        Toast.makeText(timeTable_be.this, "TE", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable_be.this, timeTable.class));
+                        timeTable_be.this.finish();
                         break;
 
                     case R.id.nav_be_option:
-                        Toast.makeText(timeTable_be.this,"BE",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(timeTable_be.this,timeTable_be.class));
+                        Toast.makeText(timeTable_be.this, "BE", Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.nav_teacher:
-                        Toast.makeText(timeTable_be.this,"Teacher",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(timeTable_be.this,timeTable_teacher.class));
+                        Toast.makeText(timeTable_be.this, "Teacher", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable_be.this, timeTable_teacher.class));
+                        timeTable_be.this.finish();
                         break;
 
                     case R.id.nav_notify:
-                        Toast.makeText(timeTable_be.this,"Notification",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(timeTable_be.this, "Notification", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case R.id.nav_timetable_manage:
+                        Toast.makeText(timeTable_be.this, "Teacher", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable_be.this, timeTable_manage.class));
+                        timeTable_be.this.finish();
+                        break;
+
+                    case R.id.nav_timetable_create:
+                        Toast.makeText(timeTable_be.this,"Teacher",Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable_be.this,timeTable_Generate.class));
                         break;
 
                     case R.id.nav_logout:
-                        Toast.makeText(timeTable_be.this,"Logout",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(timeTable_be.this, "Logout", Toast.LENGTH_SHORT).show();
                         FirebaseAuth firebaseAuth;
-                        firebaseAuth=FirebaseAuth.getInstance();
+                        firebaseAuth = FirebaseAuth.getInstance();
                         firebaseAuth.signOut();
-                        startActivity(new Intent(timeTable_be.this,LoginActivity.class));
+                        startActivity(new Intent(timeTable_be.this, LoginActivity.class));
                         timeTable_be.this.finish();
                         break;
 
                     default:
-                        Toast.makeText(timeTable_be.this,"You Clicked a Button",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(timeTable_be.this, "You Clicked a Button", Toast.LENGTH_SHORT).show();
                         break;
                 }
 
@@ -191,7 +204,7 @@ public class timeTable_be extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_time_table, container, false);
             TextView header = rootView.findViewById(R.id.tv_header);
-            header.setText("SE TIMETABLE");
+            header.setText("BE TIMETABLE");
             return rootView;
         }
     }

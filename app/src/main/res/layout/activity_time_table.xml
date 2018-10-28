@@ -83,11 +83,11 @@
     </android.support.design.widget.CoordinatorLayout>
 
     <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view_student"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/activity_student_navigation_drawer"
-        android:id="@+id/nav_view_student">
+        app:menu="@menu/activity_student_navigation_drawer">
 
     </android.support.design.widget.NavigationView>
 </android.support.v4.widget.DrawerLayout>

@@ -11,14 +11,15 @@
         android:theme="@style/AppTheme">
         <service android:name=".MyFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
         <service android:name=".FirebaseIDService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_SERVICE"/>
+                <action android:name="com.google.firebase.INSTANCE_ID_SERVICE" />
             </intent-filter>
         </service>
+
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".SplashScreen">
@@ -48,7 +49,11 @@
             android:name=".timeTable_teacher"
             android:label="@string/title_activity_time_table"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".timeTable_manage"
+            android:label="@string/title_activity_time_table"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".timeTable_Generate"></activity>
     </application>
-
 
 </manifest>

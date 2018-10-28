@@ -64,50 +64,62 @@ public class timeTable_teacher extends AppCompatActivity {
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
+        tabLayout.setVisibility(View.GONE);
 
         dl = findViewById(R.id.drl_student);
-        andt = new ActionBarDrawerToggle(this,dl,R.string.open,R.string.close);
+        andt = new ActionBarDrawerToggle(this, dl, R.string.open, R.string.close);
         andt.setDrawerIndicatorEnabled(true);
         dl.addDrawerListener(andt);
         andt.syncState();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        final NavigationView nav_view = (NavigationView)findViewById(R.id.nav_view_student);
+        final NavigationView nav_view = (NavigationView) findViewById(R.id.nav_view_student);
 
         nav_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.nav_se_option:
-                        Toast.makeText(timeTable_teacher.this,"SE",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(timeTable_teacher.this,timeTable_se.class));
+                        Toast.makeText(timeTable_teacher.this, "SE", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable_teacher.this, timeTable_se.class));
                         break;
 
                     case R.id.nav_te_option:
-                        Toast.makeText(timeTable_teacher.this,"TE",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(timeTable_teacher.this,timeTable_teacher.class));
+                        Toast.makeText(timeTable_teacher.this, "TE", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable_teacher.this, timeTable_teacher.class));
                         break;
 
                     case R.id.nav_be_option:
-                        Toast.makeText(timeTable_teacher.this,"BE",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(timeTable_teacher.this,timeTable_be.class));
+                        Toast.makeText(timeTable_teacher.this, "BE", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable_teacher.this, timeTable_be.class));
                         break;
 
                     case R.id.nav_teacher:
-                        Toast.makeText(timeTable_teacher.this,"Teacher",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(timeTable_teacher.this, "Teacher", Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.nav_notify:
-                        Toast.makeText(timeTable_teacher.this,"Notification",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(timeTable_teacher.this, "Notification", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case R.id.nav_timetable_manage:
+                        Toast.makeText(timeTable_teacher.this, "Teacher", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable_teacher.this, timeTable_manage.class));
+                        timeTable_teacher.this.finish();
+                        break;
+
+                    case R.id.nav_timetable_create:
+                        Toast.makeText(timeTable_teacher.this,"Teacher",Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable_teacher.this,timeTable_Generate.class));
                         break;
 
                     case R.id.nav_logout:
-                        Toast.makeText(timeTable_teacher.this,"Logout",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(timeTable_teacher.this, "Logout", Toast.LENGTH_SHORT).show();
                         FirebaseAuth firebaseAuth;
-                        firebaseAuth=FirebaseAuth.getInstance();
+                        firebaseAuth = FirebaseAuth.getInstance();
                         firebaseAuth.signOut();
-                        startActivity(new Intent(timeTable_teacher.this,LoginActivity.class));
+                        startActivity(new Intent(timeTable_teacher.this, LoginActivity.class));
                         timeTable_teacher.this.finish();
                         break;
                 }
@@ -186,6 +198,7 @@ public class timeTable_teacher extends AppCompatActivity {
             View rootView = inflater.inflate(R.layout.fragment_time_table, container, false);
             TextView header = rootView.findViewById(R.id.tv_header);
             header.setText("Teacher TIMETABLE");
+            header.setTextSize(30);
             return rootView;
         }
     }
@@ -209,8 +222,8 @@ public class timeTable_teacher extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 4 total pages.
-            return 4;
+            // Show 1 total pages.
+            return 1;
         }
     }
 

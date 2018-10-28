@@ -37,6 +37,10 @@
                 android:id="@+id/nav_timetable_manage"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Manage Time Table" />
+            <item
+                android:id="@+id/nav_timetable_create"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Generate Time Table" />
         </menu>
     </item>
 

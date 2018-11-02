@@ -11,11 +11,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         app:srcCompat="@drawable/logo_docket"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="78dp"
         android:foregroundGravity="center"
         android:padding="10dp"/>
 </LinearLayout>

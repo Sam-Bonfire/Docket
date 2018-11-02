@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
@@ -17,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.houseofivy.docket.R;
+
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -50,6 +52,10 @@ public class timeTable extends AppCompatActivity {
     private ViewPager mViewPager;
     private DrawerLayout dl;
     private ActionBarDrawerToggle andt;
+    private int fragmentPosition;
+    static TimeTable_Data timeTable_data = new TimeTable_Data();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,72 +73,71 @@ public class timeTable extends AppCompatActivity {
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
         dl = findViewById(R.id.drl_student);
-        andt = new ActionBarDrawerToggle(this,dl,R.string.open,R.string.close);
+        andt = new ActionBarDrawerToggle(this, dl, R.string.open, R.string.close);
         andt.setDrawerIndicatorEnabled(true);
         dl.addDrawerListener(andt);
         andt.syncState();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        final NavigationView nav_view = (NavigationView)findViewById(R.id.nav_view_student);
+        final NavigationView nav_view = (NavigationView) findViewById(R.id.nav_view_student);
 
         nav_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.nav_se_option:
-                        Toast.makeText(timeTable.this,"SE",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(timeTable.this,timeTable_se.class));
+                        Toast.makeText(timeTable.this, "SE", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable.this, timeTable_se.class));
                         timeTable.this.finish();
                         break;
 
                     case R.id.nav_te_option:
-                        Toast.makeText(timeTable.this,"TE",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(timeTable.this, "TE", Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.nav_be_option:
-                        Toast.makeText(timeTable.this,"BE",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(timeTable.this,timeTable_be.class));
+                        Toast.makeText(timeTable.this, "BE", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable.this, timeTable_be.class));
                         timeTable.this.finish();
                         break;
 
                     case R.id.nav_teacher:
-                        Toast.makeText(timeTable.this,"Teacher",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(timeTable.this,timeTable_teacher.class));
+                        Toast.makeText(timeTable.this, "Teacher", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable.this, timeTable_teacher.class));
                         timeTable.this.finish();
                         break;
 
                     case R.id.nav_notify:
-                        Toast.makeText(timeTable.this,"Notification",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(timeTable.this, "Notification", Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.nav_timetable_manage:
-                        Toast.makeText(timeTable.this,"Teacher",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(timeTable.this,timeTable_manage.class));
+                        Toast.makeText(timeTable.this, "Teacher", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable.this, timeTable_manage.class));
                         timeTable.this.finish();
                         break;
 
                     case R.id.nav_timetable_create:
-                        Toast.makeText(timeTable.this,"Teacher",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(timeTable.this,timeTable_Generate.class));
+                        Toast.makeText(timeTable.this, "Teacher", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(timeTable.this, timeTable_Generate.class));
                         break;
 
                     case R.id.nav_logout:
-                        Toast.makeText(timeTable.this,"Logout",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(timeTable.this, "Logout", Toast.LENGTH_SHORT).show();
                         FirebaseAuth firebaseAuth;
-                        firebaseAuth=FirebaseAuth.getInstance();
+                        firebaseAuth = FirebaseAuth.getInstance();
                         firebaseAuth.signOut();
-                        startActivity(new Intent(timeTable.this,LoginActivity.class));
+                        startActivity(new Intent(timeTable.this, LoginActivity.class));
                         timeTable.this.finish();
                         break;
 
                     default:
-                        Toast.makeText(timeTable.this,"You Clicked a Button",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(timeTable.this, "You Clicked a Button", Toast.LENGTH_SHORT).show();
                         break;
                 }
 
@@ -201,6 +206,7 @@ public class timeTable extends AppCompatActivity {
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
+
             return fragment;
         }
 
@@ -210,6 +216,37 @@ public class timeTable extends AppCompatActivity {
             View rootView = inflater.inflate(R.layout.fragment_time_table, container, false);
             TextView header = rootView.findViewById(R.id.tv_header);
             header.setText("TE TIMETABLE");
+            Button btn[] = new Button[timeTable_data.ids.length];
+            switch (getArguments().getInt(ARG_SECTION_NUMBER)){
+                case 1:
+                    for(int i = 0 ; i < timeTable_data.ids.length ; i ++){
+                        btn[i] = (Button) rootView.findViewById(timeTable_data.ids[i]);
+                        btn[i].setText(timeTable_data.te_t1[i]);
+                    }
+                    break;
+
+                case 2:
+                    for(int i = 0 ; i < timeTable_data.ids.length ; i ++){
+                        btn[i] = (Button) rootView.findViewById(timeTable_data.ids[i]);
+                        btn[i].setText(timeTable_data.te_t2[i]);
+                    }
+                    break;
+
+                case 3:
+                    for(int i = 0 ; i < timeTable_data.ids.length ; i ++){
+                        btn[i] = (Button) rootView.findViewById(timeTable_data.ids[i]);
+                        btn[i].setText(timeTable_data.te_t3[i]);
+                    }
+                    break;
+
+                case 4:
+                    for(int i = 0 ; i < timeTable_data.ids.length ; i ++){
+                        btn[i] = (Button) rootView.findViewById(timeTable_data.ids[i]);
+                        btn[i].setText(timeTable_data.te_t4[i]);
+                    }
+                    break;
+
+            }
             return rootView;
         }
     }
@@ -226,6 +263,7 @@ public class timeTable extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
+            fragmentPosition = position;
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
             return PlaceholderFragment.newInstance(position + 1);
@@ -236,7 +274,29 @@ public class timeTable extends AppCompatActivity {
             // Show 4 total pages.
             return 4;
         }
+
+        @Nullable
+        @Override
+        public CharSequence getPageTitle(int position) {
+            String title;
+            switch(position){
+                case 0:
+                    return "T!";
+
+                case 1:
+                    return "T2";
+
+                case 2:
+                    return "T3";
+
+                case 3:
+                    return "T4";
+            }
+            return null;
+        }
     }
+
+
 
 
     public void onClickListen(View view) {

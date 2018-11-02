@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -44,6 +45,7 @@ public class timeTable_se extends AppCompatActivity {
     private ViewPager mViewPager;
     private DrawerLayout dl;
     private ActionBarDrawerToggle andt;
+    static TimeTable_Data timeTable_data = new TimeTable_Data();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -205,6 +207,37 @@ public class timeTable_se extends AppCompatActivity {
             View rootView = inflater.inflate(R.layout.fragment_time_table, container, false);
             TextView header = rootView.findViewById(R.id.tv_header);
             header.setText("SE TIMETABLE");
+            Button btn[] = new Button[timeTable_data.ids.length];
+            switch (getArguments().getInt(ARG_SECTION_NUMBER)){
+                case 1:
+                    for(int i = 0 ; i < timeTable_data.ids.length ; i ++){
+                        btn[i] = (Button) rootView.findViewById(timeTable_data.ids[i]);
+                        btn[i].setText(timeTable_data.se_t1[i]);
+                    }
+                    break;
+
+                case 2:
+                    for(int i = 0 ; i < timeTable_data.ids.length ; i ++){
+                        btn[i] = (Button) rootView.findViewById(timeTable_data.ids[i]);
+                        btn[i].setText(timeTable_data.se_t2[i]);
+                    }
+                    break;
+
+                case 3:
+                    for(int i = 0 ; i < timeTable_data.ids.length ; i ++){
+                        btn[i] = (Button) rootView.findViewById(timeTable_data.ids[i]);
+                        btn[i].setText(timeTable_data.se_t3[i]);
+                    }
+                    break;
+
+                case 4:
+                    for(int i = 0 ; i < timeTable_data.ids.length ; i ++){
+                        btn[i] = (Button) rootView.findViewById(timeTable_data.ids[i]);
+                        btn[i].setText(timeTable_data.se_t4[i]);
+                    }
+                    break;
+
+            }
             return rootView;
         }
     }
@@ -230,6 +263,25 @@ public class timeTable_se extends AppCompatActivity {
         public int getCount() {
             // Show 3 total pages.
             return 4;
+        }
+
+        @Nullable
+        @Override
+        public CharSequence getPageTitle(int position) {
+            switch(position){
+                case 0:
+                    return "S!";
+
+                case 1:
+                    return "S2";
+
+                case 2:
+                    return "S3";
+
+                case 3:
+                    return "S4";
+            }
+            return "";
         }
     }
 

@@ -36,6 +36,17 @@
                 android:background="@drawable/button_info_layout"
                 android:onClick="onClickListen"
                 android:text="@string/_1234"
+                android:textSize="12sp"
+                android:visibility="invisible"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_info_layout"
+                android:onClick="onClickListen"
+                android:text="1st"
                 android:textSize="12sp" />
 
             <Button
@@ -45,7 +56,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/button_info_layout"
                 android:onClick="onClickListen"
-                android:text="@string/_1234"
+                android:text="2nd"
                 android:textSize="12sp" />
 
             <Button
@@ -55,7 +66,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/button_info_layout"
                 android:onClick="onClickListen"
-                android:text="@string/_1234"
+                android:text="3rd"
                 android:textSize="12sp" />
 
             <Button
@@ -65,7 +76,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/button_info_layout"
                 android:onClick="onClickListen"
-                android:text="@string/_1234"
+                android:text="4th"
                 android:textSize="12sp" />
 
             <Button
@@ -75,7 +86,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/button_info_layout"
                 android:onClick="onClickListen"
-                android:text="@string/_1234"
+                android:text="5th"
                 android:textSize="12sp" />
 
             <Button
@@ -85,7 +96,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/button_info_layout"
                 android:onClick="onClickListen"
-                android:text="@string/_1234"
+                android:text="6th"
                 android:textSize="12sp" />
 
             <Button
@@ -95,17 +106,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/button_info_layout"
                 android:onClick="onClickListen"
-                android:text="@string/_1234"
-                android:textSize="12sp" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_info_layout"
-                android:onClick="onClickListen"
-                android:text="@string/_1234"
+                android:text="7th"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -121,7 +122,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/button_info_layout"
                 android:onClick="onClickListen"
-                android:text="@string/_1234"
+                android:text="MON"
                 android:textSize="12sp" />
 
             <Button
@@ -214,7 +215,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/button_info_layout"
                 android:onClick="onClickListen"
-                android:text="@string/_1234"
+                android:text="TUE"
                 android:textSize="12sp" />
 
             <Button
@@ -307,7 +308,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/button_info_layout"
                 android:onClick="onClickListen"
-                android:text="@string/_1234"
+                android:text="WED"
                 android:textSize="12sp" />
 
             <Button
@@ -400,7 +401,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/button_info_layout"
                 android:onClick="onClickListen"
-                android:text="@string/_1234"
+                android:text="THU"
                 android:textSize="12sp" />
 
             <Button
@@ -493,7 +494,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/button_info_layout"
                 android:onClick="onClickListen"
-                android:text="@string/_1234"
+                android:text="FRI"
                 android:textSize="12sp" />
 
             <Button
@@ -577,7 +578,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
 
             <Button
                 android:layout_width="wrap_content"
